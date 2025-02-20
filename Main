@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D VR Model Viewer</title>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.130.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.130.1/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.130.1/examples/js/vr/WebXR.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    #webxr-container { width: 100vw; height: 100vh; }
+    button { position: absolute; top: 20px; left: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 10px; }
+    .annotation { position: absolute; background: rgba(0, 0, 0, 0.5); color: white; padding: 5px; }
+  </style>
+</head>
+<body>
+  <div id="webxr-container"></div>
+  <button onclick="enterVR()">Enter VR</button>
+  <div id="annotations"></div> <!-- Container for annotations -->
+
+  <script src="vr-viewer.js"></script>
+</body>
+</html>
