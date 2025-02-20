@@ -12,13 +12,19 @@
     #webxr-container { width: 100vw; height: 100vh; }
     button { position: absolute; top: 20px; left: 20px; background: rgba(0, 0, 0, 0.5); color: white; padding: 10px; }
     .annotation { position: absolute; background: rgba(0, 0, 0, 0.5); color: white; padding: 5px; }
+    .annotation-container { position: absolute; top: 10px; left: 10px; z-index: 10; color: white; }
   </style>
 </head>
 <body>
   <div id="webxr-container"></div>
-  <button onclick="enterVR()">Enter VR</button>
-  <div id="annotations"></div> <!-- Container for annotations -->
-
+  
+  <!-- Upload and Annotation UI -->
+  <div class="annotation-container">
+    <input type="file" id="fileInput" accept=".glb, .gltf" />
+    <button onclick="enterVR()">Enter VR</button>
+    <div id="annotations"></div>
+  </div>
+  
   <script src="vr-viewer.js"></script>
 </body>
 </html>
